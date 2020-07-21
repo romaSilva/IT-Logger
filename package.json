@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@types/materialize-css": "^1.0.8",
     "concurrently": "^5.2.0",
     "json-server": "^0.16.1"
   },
