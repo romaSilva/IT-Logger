@@ -4,8 +4,12 @@ import {
   LOGS_ERROR,
   ADD_LOG,
   DELETE_LOG,
+  SET_CURRENT,
+  CLEAR_CURRENT,
+  UPDATE_LOG,
 } from "./types";
 
+//Gets logs from the server
 export const getLogs = () => async (dispatch) => {
   try {
     setLoading();
@@ -25,6 +29,7 @@ export const getLogs = () => async (dispatch) => {
   }
 };
 
+//Adds new logs to the server aswell as to the state
 export const addLog = (log) => async (dispatch) => {
   try {
     setLoading();
@@ -50,6 +55,7 @@ export const addLog = (log) => async (dispatch) => {
   }
 };
 
+//Deletes the log from the server aswell as from the state
 export const deleteLog = (id) => async (dispatch) => {
   try {
     setLoading();
@@ -70,6 +76,49 @@ export const deleteLog = (id) => async (dispatch) => {
   }
 };
 
+//Updates a log
+export const updateLog = (log) => async (dispatch) => {
+  try {
+    setLoading();
+
+    const res = await fetch(`./logs/${log.id}`, {
+      method: "PUT",
+      body: JSON.stringify(log),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await res.json();
+
+    dispatch({
+      type: UPDATE_LOG,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: error.response.data,
+    });
+  }
+};
+
+//Sets the current state variable to whatever it was clicked
+export const setCurrent = (log) => {
+  return {
+    type: SET_CURRENT,
+    payload: log,
+  };
+};
+
+//Clears the current state variable
+export const clearCurrent = () => {
+  return {
+    type: CLEAR_CURRENT,
+  };
+};
+
+//Sets the loading to true
 export const setLoading = () => {
   return {
     type: SET_LOADING,
