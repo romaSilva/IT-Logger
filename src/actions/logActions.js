@@ -35,7 +35,7 @@ export const addLog = (log) => async (dispatch) => {
   try {
     setLoading();
 
-    const res = await fetch("./logs", {
+    const res = await fetch("/logs", {
       method: "POST",
       body: JSON.stringify(log),
       headers: {
