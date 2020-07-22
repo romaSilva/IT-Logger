@@ -15,7 +15,7 @@ IT Logger</h1>
   <img alt="Frontend" src=".github/addLog.JPG" width="80%">
 </p>
 
-## 🚀 Tecnologias
+## Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -25,11 +25,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML5
 - CSS
 
-## 💻 Projeto
+## Projeto
 
 Projeto desenvolvido no curso ministrado por [Brad Traversy](https://www.udemy.com/user/brad-traversy/). Para o backend foi utilizada a ferramenta [json-server](https://github.com/typicode/json-server), o fronted foi implementado com React e Redux. Nesta aplicação os usuários podem adicionar e editar atividades a serem executadas por um time.
 
-## 🔥 Como usar
+## Como usar
 
 - É necessário ter o [Node.js](https://nodejs.org/en/) e [npm](https://www.npmjs.com/) instalados
 - Clone esse repositório: `git clone https://github.com/romaSilva/IT-Logger.git`
@@ -37,7 +37,7 @@ Projeto desenvolvido no curso ministrado por [Brad Traversy](https://www.udemy.c
 - Enfim, para rodar a aplicação digite: `npm start`
   ​
 
-## ♻️ Como contribuir
+## Como contribuir
 
 - Faça um fork desse repositório;
 - Cria uma branch com a sua feature: `git checkout -b minha-feature`;
