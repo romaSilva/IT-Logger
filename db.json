@@ -8,11 +8,11 @@
       "sate": "2020-07-21T19:30:08.337Z"
     },
     {
-      "message": "Fixed hard drive on workstation 002",
-      "attention": false,
+      "id": 2,
+      "message": "Fixed hard drive on workstation 001",
+      "attention": true,
       "tech": "John Doe",
-      "date": "2020-07-21T16:47:39.033Z",
-      "id": 2
+      "sate": "2020-07-22T02:40:49.711Z"
     },
     {
       "message": "1122 wireless down",
